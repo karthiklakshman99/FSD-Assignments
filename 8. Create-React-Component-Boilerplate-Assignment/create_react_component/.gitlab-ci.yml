@@ -1,0 +1,17 @@
+sonarqube-check:
+  image:
+    name: common-registry.stackroute.in/containers/mirror/images/scanner:1.0-master
+    entrypoint: [""]
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+    GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+  tags:
+    - OFFICIAL-SONAR-EXECUTOR
+    - DEPLOYMENT_PIPELINE_ONLY
+    - ENV_PROD
+    - TLS_SUPPORTED
+  script:
+    - sonar-scanner -Dsonar.projectKey=$GITLAB_USER_ID:$CI_PROJECT_NAMESPACE:$CI_PROJECT_NAME -Dsonar.analysis.userId=$GITLAB_USER_ID -Dsonar.analysis.userEmail=$GITLAB_USER_EMAIL -Dsonar.projectName=$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME -Dsonar.analysis.server=$CI_SERVER_HOST
+  allow_failure: true
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'master'
