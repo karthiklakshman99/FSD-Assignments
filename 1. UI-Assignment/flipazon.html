@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FLIPAZON</title>
+        <link rel="stylesheet" href="flipazon.CSS">
+    </head>
+    <body>
+        <header>
+            <h1>FLIPAZON</h1>
+            <nav>
+              <a href="#home">Home</a>
+              <a href="#products">Products</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </header>
+
+          <main>
+            <section id="products" class="product-section">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                  <article class="product">
+                    <img src="Pictures\Dell-Laptop.png" alt="Product 1">
+                    <h3>Dell Laptop</h3>
+                    <p>$99.99</p>
+                    <p class="description">Short description of Dell Laptop</p>
+                    <button>Add to Cart</button>
+                  </article>
+
+                  <article class="product">
+                    <img src="Pictures\HP-Laptop.png" alt="Product 2">
+                    <h3>HP Laptop</h3>
+                    <p>$89.99</p>
+                    <p class="description">Short description of HP Laptop</p>
+                    <button>Add to Cart</button>
+                  </article>
+                </div>
+              </section>
+
+              <section id="media">
+                <h2>Product Demo</h2>
+                <audio controls>
+                  <source src="demo.mp3" type="audio/mp3">
+                  Demo Audio
+                </audio>
+                <video controls>
+                  <source src="demo.mp4" type="video/mp4">
+                  Demo Video
+                </video>
+              </section>
+
+              <section id="checkout">
+                <h2>Checkout</h2>
+                <form action="#" method="POST">
+                  <label for="fullname">Full Name:</label>
+                  <input type="text" id="fullname" name="fullname" required>
+              
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              
+                  <label for="address">Shipping Address:</label>
+                  <textarea id="address" name="address" rows="3" required></textarea>
+                  
+                  <label for="payment">Payment Method:</label>
+                  <select id="payment" name="payment" required>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                  </select>
+                  
+                  <button type="submit">Complete Purchase</button>
+                </form>
+              </section>
+          </main>
+    </body>
+
+    <footer>
+      <p>&copy; 2024 FLIPAZON. All rights reserved.</p>
+    </footer>
+</html>
