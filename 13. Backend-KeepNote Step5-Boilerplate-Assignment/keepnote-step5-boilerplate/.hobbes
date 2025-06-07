@@ -1,0 +1,7 @@
+{
+  "workflow": "DotNetV6MongoApp",
+  "scores": {
+    "commanderTests":50,
+    "cadetTests":50
+  }
+}
