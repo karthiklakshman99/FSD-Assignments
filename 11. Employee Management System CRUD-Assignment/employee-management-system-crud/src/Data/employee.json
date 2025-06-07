@@ -1,0 +1,24 @@
+{
+  "employees": [
+    {
+      "id": "9113",
+      "name": "Karthik Raja",
+      "email": "karthikraja@gmail.com",
+      "designation": "Senior Software Engineer"
+    }
+  ],
+  "users": [
+    {
+      "id": "2602",
+      "username": "Karthik",
+      "email": "karthik@gmail.com",
+      "password": "Karthik26$"
+    },
+    {
+      "id": "64e8",
+      "username": "Raja",
+      "email": "raja@gmail.com",
+      "password": "Raja2607$"
+    }
+  ]
+}
